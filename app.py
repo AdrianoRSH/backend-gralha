@@ -7,6 +7,10 @@ app = Flask(__name__)
 CORS(app) 
 app.secret_key = 'amor'
 
+@app.route('/')
+def hello():
+    return "Hello, World!"
+
 mail_settings = {
     "MAIL_SERVER": 'smtp-mail.outlook.com',
     "MAIL_PORT": "587",
